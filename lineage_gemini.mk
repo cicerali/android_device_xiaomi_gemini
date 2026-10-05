@@ -25,7 +25,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_NAME := lineage_gemini
 PRODUCT_DEVICE := gemini
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := MI 5
+PRODUCT_MODEL := Mi 5 (Pixel Edition)
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -38,3 +38,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := "Xiaomi/gemini/gemini:8.0.0/OPR1.170623.032/V9.6.1.0.OAAMIFD:user/release-keys"
 
 TARGET_VENDOR := Xiaomi
+
+# MindTheGapps (Android 11 built-in)
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+
+# Pure Pixel Experience (Bootanimation, Google Sans, Pixel Audio)
+$(call inherit-product, vendor/pixel/pixel.mk)
